@@ -151,18 +151,18 @@ export const formInputList: IFormInput[] = [
   },
 ];
 
-// export const colors: string[] = [
-//   "#ff0076",
-//   "#ac5478",
-//   "#356787",
-//   "#ab5797",
-//   "#652097",
-//   "#246790",
-//   "#cfc45d",
-//   "#af5252",
-//   "#219b21",
-//   "#999466",
-// ];
+export const colors: string[] = [
+  "#ff0076",
+  "#ac5478",
+  "#356787",
+  "#ab5797",
+  "#652097",
+  "#246790",
+  "#cfc45d",
+  "#af5252",
+  "#219b21",
+  "#999466",
+];
 
 // export const categories: ICategory[] = [
 //   {

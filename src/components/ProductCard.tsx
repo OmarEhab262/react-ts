@@ -3,13 +3,20 @@ import { IProduct } from "../interfaces";
 import { textSlicer as textSlicer } from "../utils/function";
 import Image from "./Image";
 import Button from "./ui/Button";
+import CircleColor from "./CircleColor";
 
 interface Iprops {
   product: IProduct;
 }
 
 const ProductCard = ({ product }: Iprops) => {
-  const [allDescription, setAllDescription] = useState(false);
+  const { colors } = product;
+
+  const renderProductColors = colors.map((color) => (
+    <CircleColor key={color} color={color} />
+  ));
+
+  const [allDescription, setAllDescription] = useState(true);
   return (
     <div className="max-w-sm md:max-w-lg border rounded-md p-2 flex flex-col m-2">
       <Image
@@ -23,16 +30,14 @@ const ProductCard = ({ product }: Iprops) => {
         onClick={() => setAllDescription(!allDescription)}
         className="cursor-pointer w-full"
       >
-        {allDescription ? textSlicer(product.description) : product.description}
+        {allDescription
+          ? textSlicer(product.description)
+          : textSlicer(product.description, 150)}
       </p>
-
-      <div className="flex items-center gap-2 my-2">
-        <span className="w-5 h-5 bg-indigo-600 rounded-full cursor-pointer text-white " />
-        <span className="w-5 h-5 bg-red-600 rounded-full cursor-pointer text-white " />
-        <span className="w-5 h-5 bg-green-600 rounded-full cursor-pointer text-white" />
-        <span className="w-5 h-5 bg-purple-800 rounded-full cursor-pointer text-white " />
-        <span className="w-5 h-5 bg-stone-900 rounded-full cursor-pointer text-white " />
+      <div className="flex items-center gap-2 my-2 flex-wrap">
+        {renderProductColors}
       </div>
+
       <div className="flex items-center justify-between">
         <span>$500,600</span>
         <Image

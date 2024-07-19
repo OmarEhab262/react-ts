@@ -15,7 +15,7 @@ export interface IProduct {
 
 export interface IFormInput {
   id: string;
-  name: ProductNameTypes; //to control the data that pass from inputs
+  name: "title" | "description" | "imageURL" | "price";
   label: string;
   type: string;
 }

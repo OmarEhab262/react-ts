@@ -1,4 +1,4 @@
-import { Button, Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
 // import { useState } from "react";
 
 interface Iprops {
@@ -11,13 +11,6 @@ interface Iprops {
 const Modal = ({ isOpen, closeModal, title, children }: Iprops) => {
   return (
     <>
-      <Button
-        // onClick={openModal}
-        className="rounded-md bg-black/70 py-2 px-4 text-sm font-medium text-white focus:outline-none data-[hover]:bg-black/60 data-[focus]:outline-1 data-[focus]:outline-white"
-      >
-        Open dialog
-      </Button>
-
       <Dialog
         open={isOpen}
         as="div"
