@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { IFormInput, IProduct } from "../interfaces";
+import { ICategory, IFormInput, IProduct } from "../interfaces";
 
 export const productInformation: IProduct[] = [
   {
@@ -164,23 +164,23 @@ export const colors: string[] = [
   "#999466",
 ];
 
-// export const categories: ICategory[] = [
-//   {
-//     id: uuidv4(),
-//     name: "NoteBooks",
-//     imageURL:
-//       "https://images.pexels.com/photos/843227/pexels-photo-843227.jpeg?auto=compress&cs=tinysrgb&w=600",
-//   },
-//   {
-//     id: uuidv4(),
-//     name: "To-Do-List",
-//     imageURL:
-//       "https://images.pexels.com/photos/6192131/pexels-photo-6192131.jpeg?auto=compress&cs=tinysrgb&w=600",
-//   },
-//   {
-//     id: uuidv4(),
-//     name: "pens",
-//     imageURL:
-//       "https://images.pexels.com/photos/867482/pexels-photo-867482.jpeg?auto=compress&cs=tinysrgb&w=600",
-//   },
-// ];
+export const categories: ICategory[] = [
+  {
+    id: uuidv4(),
+    name: "NoteBooks",
+    imageURL:
+      "https://images.pexels.com/photos/843227/pexels-photo-843227.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    id: uuidv4(),
+    name: "To-Do-List",
+    imageURL:
+      "https://images.pexels.com/photos/6192131/pexels-photo-6192131.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    id: uuidv4(),
+    name: "pens",
+    imageURL:
+      "https://images.pexels.com/photos/867482/pexels-photo-867482.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+];
